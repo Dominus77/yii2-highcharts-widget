@@ -8,10 +8,10 @@ use yii\helpers\Html;
 use yii\helpers\ArrayHelper;
 
 /**
- * Class HighchartsWidget
+ * Class HighChartsWidget
  * @package dominus77\highcharts
  */
-class HighchartsWidget extends Widget
+class HighChartsWidget extends Widget
 {
     /**
      * @var array the HTML attributes for the links container tag.
@@ -87,7 +87,7 @@ class HighchartsWidget extends Widget
     {
         $view = $this->getView();
 
-        $bundle = HighchartsAsset::register($view);
+        $bundle = HighChartsAsset::register($view);
         $id = str_replace('-', '_', $this->options['id']);
         $options = $this->clientOptions;
 
@@ -105,7 +105,6 @@ class HighchartsWidget extends Widget
 
         if ($theme = ArrayHelper::getValue($options, 'theme')) {
             $bundle->js[] = "themes/{$theme}.js";
-            unset($options['theme']);
         }
 
         $options = Json::encode($options);

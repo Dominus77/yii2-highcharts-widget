@@ -6,10 +6,10 @@ use yii\web\AssetBundle;
 use yii\web\JqueryAsset;
 
 /**
- * Class HighchartsAsset
+ * Class HighChartsAsset
  * @package dominus77\highcharts
  */
-class HighchartsAsset extends AssetBundle
+class HighChartsAsset extends AssetBundle
 {
     /**
      * @var string
