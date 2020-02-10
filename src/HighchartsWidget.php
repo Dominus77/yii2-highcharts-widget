@@ -105,6 +105,7 @@ class HighchartsWidget extends Widget
 
         if ($theme = ArrayHelper::getValue($options, 'theme')) {
             $bundle->js[] = "themes/{$theme}.js";
+            unset($options['theme']);
         }
 
         $options = Json::encode($options);
