@@ -1,0 +1,32 @@
+{
+    "name": "dominus77/yii2-highcharts",
+    "description": "Renders a Highcharts widget for Yii2.",
+    "type": "yii2-extension",
+    "keywords": ["dominus77","yii2","highcharts","charts","widget"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexey Schevchenko",
+            "email": "ivanovosity@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "~2.0",
+        "bower-asset/highcharts": "^8.0"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master",
+        "phpunit/phpunit": "6.*"
+    },
+    "repositories":[
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "dominus77\\highcharts\\": "src"
+        }
+    }
+}
