@@ -3,6 +3,7 @@
 namespace dominus77\highcharts;
 
 use yii\web\AssetBundle;
+use yii\web\JqueryAsset;
 
 /**
  * Class HighchartsAsset
@@ -24,4 +25,9 @@ class HighchartsAsset extends AssetBundle
         $src = YII_ENV_DEV ? '.src' : '';
         $this->js[] = 'highcharts' . $src . '.js';
     }
+
+    /** @var array */
+    public $depends = [
+        JqueryAsset::class,
+    ];
 }
