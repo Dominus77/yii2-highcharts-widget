@@ -1,9 +1,12 @@
 # Simple Highcharts widget for Yii2
 
-[![Software License](https://poser.pugx.org/dominus77/yii2-noty/license)](https://github.com/Dominus77/yii2-highcarts-widget/blob/master/LICENSE.md)
-[![Build Status](https://travis-ci.org/Dominus77/yii2-noty.svg?branch=master)](https://travis-ci.org/Dominus77/yii2-highcharts-widget)
+[![Latest Version](https://poser.pugx.org/dominus77/yii2-highcarts-widget/v/stable)](https://packagist.org/packages/dominus77/yii2-highcarts-widget)
+[![Software License](https://poser.pugx.org/dominus77/yii2-highcarts-widget/license)](https://github.com/Dominus77/yii2-highcarts-widget/blob/master/LICENSE.md)
+[![Build Status](https://travis-ci.org/Dominus77/yii2-highcarts-widget.svg?branch=master)](https://travis-ci.org/Dominus77/yii2-highcharts-widget)
+[![codecov](https://codecov.io/gh/Dominus77/yii2-highcharts-widget/branch/master/graph/badge.svg)](https://codecov.io/gh/Dominus77/yii2-highcharts-widget)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Dominus77/yii2-highcharts-widget/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Dominus77/yii2-highcharts-widget/?branch=master)
 
-Noty widget for Yii2
+Highcharts widget for Yii2
 
 ## Installation
 
