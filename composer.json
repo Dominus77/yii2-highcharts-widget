@@ -1,5 +1,5 @@
 {
-    "name": "dominus77/yii2-highcharts",
+    "name": "dominus77/yii2-highcharts-widget",
     "description": "Renders a Highcharts widget for Yii2.",
     "type": "yii2-extension",
     "keywords": ["dominus77","yii2","highcharts","charts","widget"],
