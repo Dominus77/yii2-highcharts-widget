@@ -40,6 +40,10 @@ class HighChartsWidget extends Widget
      * @var bool
      */
     private $_renderTo;
+    /**
+     * @var string
+     */
+    private $_src = '';
 
     /**
      * @inheritdoc
@@ -47,6 +51,7 @@ class HighChartsWidget extends Widget
     public function init()
     {
         parent::init();
+        $this->_src = YII_DEBUG ? '.src' : '';
         if (!isset($this->options['id'])) {
             $this->options['id'] = $this->getId();
         }
@@ -58,9 +63,9 @@ class HighChartsWidget extends Widget
             ],
             $this->clientOptions
         );
-        $src = YII_DEBUG ? '.src' : '';
+
         if (ArrayHelper::getValue($this->clientOptions, 'exporting.enabled')) {
-            $this->modules[] = 'exporting' . $src . '.js';
+            $this->modules[] = 'exporting' . $this->_src . '.js';
         }
 
         $this->_renderTo = ArrayHelper::getValue($this->clientOptions, 'chart.renderTo');
@@ -89,13 +94,12 @@ class HighChartsWidget extends Widget
         $id = str_replace('-', '_', $this->options['id']);
         $options = $this->clientOptions;
 
-        $src = YII_DEBUG ? '.src' : '';
         if ($this->enable3d) {
-            $bundle->js[] = 'highcharts-3d' . $src . '.js';
+            $bundle->js[] = 'highcharts-3d' . $this->_src . '.js';
         }
 
         if ($this->enableMore) {
-            $bundle->js[] = 'highcharts-more' . $src . '.js';
+            $bundle->js[] = 'highcharts-more' . $this->_src . '.js';
         }
 
         foreach ($this->modules as $module) {
@@ -103,7 +107,7 @@ class HighChartsWidget extends Widget
         }
 
         if ($theme = ArrayHelper::getValue($options, 'theme')) {
-            $bundle->js[] = "themes/{$theme}" . $src . '.js';
+            $bundle->js[] = "themes/{$theme}" . $this->_src . '.js';
         }
 
         $options = Json::encode($options);
