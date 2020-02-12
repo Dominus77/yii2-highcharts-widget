@@ -61,7 +61,7 @@ use dominus77\highcharts\HighChartsWidget;
 ```
 
 ## More Information
-Please, check the [Highcharts](https://www.highcharts.com/docs/index)
+Please, check the [Highcharts Documentation](https://www.highcharts.com/docs/index)
 
 ## Testing
 ```

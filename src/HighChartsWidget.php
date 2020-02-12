@@ -58,9 +58,9 @@ class HighChartsWidget extends Widget
             ],
             $this->clientOptions
         );
-
+        $src = YII_DEBUG ? '.src' : '';
         if (ArrayHelper::getValue($this->clientOptions, 'exporting.enabled')) {
-            $this->modules[] = 'exporting.js';
+            $this->modules[] = 'exporting' . $src . '.js';
         }
 
         $this->_renderTo = ArrayHelper::getValue($this->clientOptions, 'chart.renderTo');
@@ -103,7 +103,7 @@ class HighChartsWidget extends Widget
         }
 
         if ($theme = ArrayHelper::getValue($options, 'theme')) {
-            $bundle->js[] = "themes/{$theme}.js";
+            $bundle->js[] = "themes/{$theme}" . $src . ".js";
         }
 
         $options = Json::encode($options);
