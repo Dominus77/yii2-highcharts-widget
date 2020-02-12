@@ -22,7 +22,7 @@ class HighChartsAsset extends AssetBundle
     public function init()
     {
         parent::init();
-        $src = YII_ENV_DEV ? '.src' : '';
+        $src = YII_DEBUG ? '.src' : '';
         $this->js[] = 'highcharts' . $src . '.js';
     }
 

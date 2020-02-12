@@ -34,8 +34,6 @@ class HighChartsWidget extends Widget
     public $enableMore = false;
     /**
      * @var array the modules to register. The modules need to point to the name of the modules available under
-     * @vendor/2amigos/yii2-highcharts-widget/assets/vendor/modules. Only the filename (ie `drilldown.js`) that is very
-     * important.
      */
     public $modules = [];
     /**
@@ -90,13 +88,13 @@ class HighChartsWidget extends Widget
         $bundle = HighChartsAsset::register($view);
         $id = str_replace('-', '_', $this->options['id']);
         $options = $this->clientOptions;
-
+        $src = YII_DEBUG ? '.src' : '';
         if ($this->enable3d) {
-            $bundle->js[] = YII_DEBUG ? 'highcharts-3d.src.js' : 'highcharts-3d.js';
+            $bundle->js[] = 'highcharts-3d' . $src . '.js';
         }
 
         if ($this->enableMore) {
-            $bundle->js[] = YII_DEBUG ? 'highcharts-more.src.js' : 'highcharts-more.js';
+            $bundle->js[] = 'highcharts-more' . $src . '.js';
         }
 
         foreach ($this->modules as $module) {
@@ -109,6 +107,6 @@ class HighChartsWidget extends Widget
 
         $options = Json::encode($options);
 
-        $view->registerJs(";var highChart_{$id} = new Highcharts.Chart({$options});");
+        $view->registerJs("var highChart_{$id} = new Highcharts.Chart({$options});");
     }
 }
