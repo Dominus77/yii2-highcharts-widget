@@ -88,6 +88,7 @@ class HighChartsWidget extends Widget
         $bundle = HighChartsAsset::register($view);
         $id = str_replace('-', '_', $this->options['id']);
         $options = $this->clientOptions;
+
         $src = YII_DEBUG ? '.src' : '';
         if ($this->enable3d) {
             $bundle->js[] = 'highcharts-3d' . $src . '.js';
